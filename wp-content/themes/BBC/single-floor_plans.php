@@ -42,21 +42,23 @@ $thumb_src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), '
 					<div class="youtube"><iframe src="<?php echo get_post_meta(get_the_ID(), 'virtual_tour', true); ?>" width="100%" height="300"></iframe></div>
 
 					<h1>Floor Plans</h1>
-					<ul class="nav nav-pills">
-						<li class="active"><a  href="#1st" data-toggle="tab">1st Floor</a></li>
-						<li><a href="#2nd" data-toggle="tab">2nd Floor</a></li>
-						<li><a href="#details" data-toggle="tab">Details</a></li>
-					</ul>
-					<div class="tab-content clearfix">
-						<div class="tab-pane active" id="1st">
-							<img src="<?php echo bbc_get_custom_field('1st_floor'); ?>">
+					<div class="plans-panel">
+						<ul class="nav nav-pills">
+							<li class="active"><a  href="#1st" data-toggle="tab">1st Floor</a></li>
+							<li><a href="#2nd" data-toggle="tab">2nd Floor</a></li>
+							<li><a href="#details" data-toggle="tab">Details</a></li>
+						</ul>
+						<div class="tab-content clearfix">
+							<div class="tab-pane active" id="1st">
+								<img src="<?php echo bbc_get_custom_field('1st_floor'); ?>">
+							</div>
+							<div class="tab-pane" id="2nd">
+								<img src="<?php echo bbc_get_custom_field('2nd_floor'); ?>">
+							</div>
+					        <div class="tab-pane" id="details">
+					        	<p><?php echo bbc_get_custom_field('details'); ?></p>
+							</div>						
 						</div>
-						<div class="tab-pane" id="2nd">
-							<img src="<?php echo bbc_get_custom_field('2nd_floor'); ?>">
-						</div>
-				        <div class="tab-pane" id="details">
-				        	<p><?php echo bbc_get_custom_field('details'); ?></p>
-						</div>						
 					</div>
 				</div>
 				<div class="clearfix"></div>

@@ -81,7 +81,7 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 								$thumb_src = wp_get_attachment_image_src( get_post_thumbnail_id($filtered_post->ID), 'thumbnail_size' );
 							?>
 							<div class="col-md-4 col-sm-6 col-xs-12 text-center floor-plans">
-								<a href="<?php echo $floor_src; ?>"><img src="<?php echo $thumb_src[0]; ?>"></a>
+								<a href="<?php echo $filtered_post_src; ?>"><img src="<?php echo $thumb_src[0]; ?>"></a>
 								<h1><?php echo $filtered_post->post_title; ?></h1>
 								<div class="plan-info">
 									<h2 class="location">Location: <?php echo $location; ?></h2>

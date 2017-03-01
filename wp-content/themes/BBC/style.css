@@ -2160,6 +2160,7 @@ ul.list-info li {
 
 .floor-plan-custom-post h1, .floor-plan-custom-post h4 {
     color: #2e71a9;
+    margin-top: 0;
 }
 
 .floor-plan-custom-post .description {
@@ -2199,7 +2200,7 @@ ul.list-info li {
 
 .floor-plan-custom-post .tab-content>.tab-pane {
     position: relative;
-    height: 300px;
+    height: 350px;
     padding: 30px;
     text-align: justify;
 }
@@ -2209,6 +2210,11 @@ ul.list-info li {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.plans-panel {
+    border: 1px solid #424242;
+    border-radius: 3px;
 }
 
 /*!---------- 29. OTHER ----------*/
