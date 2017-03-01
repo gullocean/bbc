@@ -2103,6 +2103,22 @@ ul.list-info li {
     width: 100%;
 }
 
+.home-plan-gallery a {
+    display: inline-block;
+}
+
+.home-plan-gallery a:hover img {
+    opacity: 0.8;
+}
+
+.home-plan-gallery img {
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
 /*!---------- 28. OTHER ----------*/
 
 .border-bottom {
