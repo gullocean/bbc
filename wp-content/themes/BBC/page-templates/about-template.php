@@ -31,7 +31,7 @@ $company_desc = bbc_get_custom_field('company_description');
 					</div>
 					<div class="col-md-6 col-xs-12 company-desc">
 						<h3><?php echo $company_headline; ?></h3>
-						<p><?php echo $company_desc; ?></p>
+						<p class="text-justify"><?php echo $company_desc; ?></p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
