@@ -735,8 +735,8 @@ section {
 /*!---------- 6. BUTTONS ----------*/
 
 .btn, .button {
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border: 2px solid #745cf9;
+    font-family: "Bree Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: 2px solid #2e71a9;
     padding: 0 26px;
     min-width: 150px;
     line-height: 36px;
@@ -745,7 +745,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 0;
-    color: #745cf9;
+    color: #2e71a9;
     text-align: center;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -806,10 +806,6 @@ section {
     background: #5d47d7;
     border-color: #5d47d7;
     color: #fff;
-}
-
-.btn:visited {
-    color: #745cf9;
 }
 
 .btn-white:visited, .btn:visited:hover {
@@ -2127,7 +2123,95 @@ ul.list-info li {
     transition: opacity 0.2s;
 }
 
-/*!---------- 28. OTHER ----------*/
+/*!---------- 28. Floor Plan Post Template ----------*/
+.spec-section {
+    border-bottom: 5px solid #5dc8ef;
+    height: 320px;
+}
+
+.plan-info {
+    position: relative;
+    height: 100%;
+    border-right: 1px solid #5dc8ef;
+}
+
+.plan-picture {
+    position: relative;
+    height: 100%;
+}
+
+.plan-picture img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plan-info .wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.floor-plan-custom-post h1 {
+    font-size: 30px;
+}
+
+.floor-plan-custom-post h1, .floor-plan-custom-post h4 {
+    color: #2e71a9;
+}
+
+.floor-plan-custom-post .description {
+    text-align: justify;
+    padding-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .floor-plan-custom-post .description {
+        padding-right: 15px;
+    }
+}
+.plan-info a {
+    display: block;
+    margin: 0 auto;
+    margin: 5px 0;
+}
+
+.floor-plan-custom-post ul.nav {
+    background-color: #424242;
+}
+
+.floor-plan-custom-post ul.nav li a {
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 0;
+    border: none;
+}
+
+.floor-plan-custom-post ul.nav li a:hover {
+    background-color: #000;
+}
+
+.floor-plan-custom-post ul.nav li.active a {
+    background-color: #000;
+}
+
+.floor-plan-custom-post .tab-content>.tab-pane {
+    position: relative;
+    height: 300px;
+    padding: 30px;
+    text-align: justify;
+}
+
+.floor-plan-custom-post .tab-content>.tab-pane img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*!---------- 29. OTHER ----------*/
 
 .border-bottom {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);

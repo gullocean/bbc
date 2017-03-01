@@ -129,6 +129,8 @@ function bbc_scripts() {
 	wp_enqueue_style( 'bbc-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'bbc-scripts', get_template_directory_uri() . '/js/bbc-scripts.js', array( 'jquery' ), '20170226', true );
+
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '20170301', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'bbc_scripts' );
