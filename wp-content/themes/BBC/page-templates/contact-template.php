@@ -6,19 +6,57 @@ get_header(); ?>
 
 <?php $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_class() : ''; ?>
 	<div class="row">
-		<div id="primary" class="col-md-12 mb-xs-24 <?php echo esc_attr( $layout_class ); ?>">
-			<?php
-			while ( have_posts() ) : the_post();
+		<div class="banner"><iframe src="<?php echo bbc_get_custom_field('map_embed_url'); ?>" width="100%" height="309"></iframe></div>
+		<div id="primary" class="col-md-12 mb-xs-24 contact-template">
+			<div class="container">
+				<?php
+				while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content' );
+					get_template_part( 'template-parts/content' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				endwhile; // End of the loop.
+				?>
 
-			endwhile; // End of the loop.
-			?>
+				<div class="contact-section">
+					<div class="col-md-8 col-xs-12 cf">
+						<?php echo do_shortcode('[contact-form-7 id="225" title="Contact Form"]'); ?>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<div class="service-availability">
+							<h2 class="headline"><?php echo bbc_get_custom_field('service_availability_headline'); ?></h2>
+							<p class="desc"><?php echo bbc_get_custom_field('service_availability_description'); ?></p>
+						</div>
+						<div class="office-info">
+							<h2 class="headline"><?php echo bbc_get_custom_field('office_headline'); ?></h2>
+							<ul class="list-info">
+								<li><strong>Address: </strong><?php echo bbc_get_custom_field('office_address'); ?></li>
+								<li><strong>Phone: </strong><?php echo bbc_get_custom_field('office_phone'); ?></li>
+								<li><strong>Email: </strong><?php echo bbc_get_custom_field('office_email'); ?></li>
+							</ul>
+						</div>
+						<div class="business-hours">
+							<h2 class="headline"><?php echo bbc_get_custom_field('business_hours_headline'); ?></h2>
+							<ul class="list-info">
+								<li><strong>Monday - Friday: </strong><?php echo bbc_get_custom_field('monday_to_friday'); ?></li>
+								<li><strong>Saturday: </strong><?php echo bbc_get_custom_field('saturday'); ?></li>
+								<li><strong>Sunday: </strong><?php echo bbc_get_custom_field('sunday'); ?></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="divider"></div>
+
+				<div class="image-group">
+					<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field('item1'); ?>"></div>
+					<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field('item2'); ?>"></div>
+					<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field('item3'); ?>"></div>
+					<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field('item4'); ?>"></div>
+					<div class="clearfix"></div>
+				</div>
+
+			</div>
 		</div><!-- #primary -->
 	</div>
 <?php
