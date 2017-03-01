@@ -86,6 +86,10 @@ body {
     padding: 50px 0;   
 }
 
+#primary {
+    padding: 50px 0;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -2081,7 +2085,52 @@ footer.bg-dark a {
     font-size: 20px;
 }
 
-/*!---------- 25. OTHER ----------*/
+
+/*!---------- 25. ABOUT TEMPLATE ----------*/
+.about-template h2 {
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 8px;
+    margin: 0 15px 30px 15px;
+}
+
+.company-desc h3 {
+    margin-top: 0;
+    color: #ac423d;
+}
+
+.our-team h3 {
+    margin: 0 15px 30px 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #cccccc;
+    color: #347cb2;
+    font-size: 30px;    
+}
+
+.our-team p {
+    padding: 0 45px;
+}
+
+.about-template .divider {
+    width: 100%;
+    text-align: center;
+    padding: 55px 0 0 0;
+    background: url(assets/images/hr-shadow.png) no-repeat center 27px;
+}
+
+.about-template .social-icons {
+    margin: 20px 0;
+}
+
+.our-team .wrapper >div, .about-company >div {
+    margin-top: 15px;
+}
+
+.our-team img.portfolio {
+    -moz-box-shadow: 0px 9px 15px -6px rgba(0, 0, 0, .9);
+    -webkit-box-shadow: 0px 9px 15px -6px rgba(0, 0, 0, .9);
+    box-shadow: 0px 9px 15px -6px rgba(0, 0, 0, .9);
+}
+/*!---------- 26. OTHER ----------*/
 
 .border-bottom {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);

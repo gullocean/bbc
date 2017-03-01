@@ -84,46 +84,6 @@ endif;
 add_action( 'after_setup_theme', 'bbc_setup' );
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function bbc_widgets_init() {
-	register_sidebar( array(
-		                  'id'            => 'sidebar-1',
-		                  'name'          => __( 'Sidebar', 'bbc' ),
-		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		                  'after_widget'  => '</div>',
-		                  'before_title'  => '<h2 class="widget-title">',
-		                  'after_title'   => '</h2>',
-	                  ) );
-
-	register_sidebar( array(
-		                  'id'            => 'sidebar-home',
-		                  'name'          => __( 'Homepage', 'bbc' ),
-		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		                  'after_widget'  => '</div>',
-		                  'before_title'  => '<h2 class="widget-title">',
-		                  'after_title'   => '</h2>',
-	                  ) );
-
-	for ( $i = 1; $i < 5; $i ++ ) {
-		register_sidebar( array(
-			                  'id'            => 'footer-widget-' . $i,
-			                  'name'          => sprintf( __( 'Footer Widget %s', 'bbc' ), $i ),
-			                  'description'   => __( 'Used for footer widget area', 'bbc' ),
-			                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			                  'after_widget'  => '</div>',
-			                  'before_title'  => '<h2 class="widget-title">',
-			                  'after_title'   => '</h2>',
-		                  ) );
-	}
-
-}
-
-add_action( 'widgets_init', 'bbc_widgets_init' );
-
-/**
  * Enqueue scripts and styles.
  */
 function bbc_scripts() {
