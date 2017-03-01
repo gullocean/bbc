@@ -162,6 +162,11 @@ body {
 .main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a, .main-navigation .current-menu-ancestor > a {
 }
 
+.menu li.current-menu-item > a {
+    border-bottom: solid 2px #72c02c;
+    color: #72c02c;
+}
+
 
 .menu ul.sub-menu {
     border-top: solid 2px #72c02c;
