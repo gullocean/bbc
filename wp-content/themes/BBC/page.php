@@ -15,12 +15,16 @@
 get_header(); ?>
 <?php $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_class() : ''; ?>
 	<div class="row">
-		<div id="primary" class="col-md-8 mb-xs-24 <?php echo esc_attr( $layout_class ); ?>"><?php
-			while ( have_posts() ) : the_post();
+		<div id="primary" class="col-md-12 mb-xs-24 <?php echo esc_attr( $layout_class ); ?>">
+			<div class="container">
+			<?php
+				while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+					get_template_part( 'template-parts/content', 'page' );
 
-			endwhile; // End of the loop. ?>
+				endwhile; // End of the loop. 
+			?>
+			</div>
 		</div><!-- #primary -->
 	</div>
 <?php
