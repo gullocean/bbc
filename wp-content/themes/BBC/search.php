@@ -39,8 +39,8 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 						                                    'compare' => '>=',
 						                                ),
 						                                array(
-						                                    'key'     => 'bedrooms',
-						                                    'value'   => $bedrooms,
+						                                    'key'     => 'bathrooms',
+						                                    'value'   => $bathrooms,
 						                                    'compare' => '>=',
 						                                ),
 						                                array(
@@ -55,6 +55,15 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 						                                ),
 						                            )
 					    );
+
+						if (isset($_REQUEST['price']) && $property_type == 'property') {
+							$price_query = array(
+	                            'key'     => 'price',
+	                            'value'   => $price,
+	                            'compare' => '>=',
+							);
+							array_push($v_args['meta_query'], $price_query);
+						}
 
 						$floorSearchQuery = new WP_Query( $v_args );
 

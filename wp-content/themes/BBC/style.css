@@ -1119,6 +1119,7 @@ body.scrolled.is_admin_bar nav {
 #searchsubmit {
     background-color: #347cb2;
     font-size: 20px;
+    color: #FFF;
     font-family: 'Bree Serif';
     line-height: 34px;
     outline: none;
@@ -1993,10 +1994,12 @@ footer.bg-dark a {
 
 .floor-plans h1, .list-posts h1 {
     font-size: 24px;
+    color: #2e71a9;
 }
 
 .floor-plans h2, .list-posts h2 {
     font-size: 20px;
+    color: #2e71a9;
 }
 
 
