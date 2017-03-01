@@ -1113,13 +1113,14 @@ body.scrolled.is_admin_bar nav {
 
 #searchsubmit {
     background-color: #347cb2;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Bree Serif';
     line-height: 34px;
     outline: none;
     border: none;
     margin-top: 30px;
     border-radius: 5px;
+    padding: 5px 30px;
 }
 
 .entry-header.nolist {
@@ -1977,7 +1978,7 @@ footer.bg-dark a {
     margin: 30px 0;
 }
 
-.floor-plans a.plan-title {
+.home-plans a.plan-title {
     display: block;
     text-align: center;
     margin: 25px 0;
@@ -2097,7 +2098,12 @@ ul.list-info li {
     font-family: "Bree Serif";
 }
 
-/*!---------- 27. OTHER ----------*/
+/*!---------- 27. HOME PLANS PAGE ----------*/
+.banner img {
+    width: 100%;
+}
+
+/*!---------- 28. OTHER ----------*/
 
 .border-bottom {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
