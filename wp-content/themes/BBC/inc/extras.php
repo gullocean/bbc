@@ -732,6 +732,53 @@ function bbc_testimonials() {
 }
 
 /*
+ * Display Social Icons
+ */
+function bbc_include_social_icons() {
+	$social_icons = array(
+		't-1' => 'https://www.facebook.com/boisebuildingco',
+		't-2' => 'https://twitter.com/BoiseBuildingCo',
+		't-3' => 'http://pinterest.com',
+		't-4' => 'http://www.linkedin.com/profile/view?id=96482539',
+		't-5' => 'mailto:mike@boisebuilding.co',
+		't-6' => '/contact'
+	);
+
+	?>
+	<div class="social-icons">
+	<?php
+	foreach ($social_icons as $key => $value) {
+		?>
+		<a href="<?php echo $value; ?>">
+			<img src="<?php echo get_template_directory_uri() . '/assets/images/social_icons/' . $key . '.png'?>">
+		</a>
+		<?php	
+	}
+	?>
+	</div>
+	<?php
+}
+/*
+ * Display Image Group
+ */
+function bbc_include_image_group() {
+
+	$img_items = array('item1', 'item2', 'item3', 'item4');
+
+	?>
+	<div class="image-group">
+	<?php
+	foreach ($img_items as $item) {
+		?>
+		<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field($item); ?>"></div>
+		<?php	
+	}
+	?>
+	<div class="clearfix"></div>
+	</div>
+	<?php
+}
+/*
  * Get data from custom field.
  */
 function bbc_get_custom_field($field_name) {

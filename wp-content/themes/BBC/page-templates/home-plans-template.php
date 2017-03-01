@@ -47,13 +47,7 @@ $banner_src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 
 					</div>
 
 					<div class="divider"></div>
-					<div class="image-group">
-						<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field('item1'); ?>"></div>
-						<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field('item2'); ?>"></div>
-						<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field('item3'); ?>"></div>
-						<div class="col-md-3 col-xs-6 text-center"><img src="<?php echo bbc_get_custom_field('item4'); ?>"></div>
-						<div class="clearfix"></div>
-					</div>
+					<?php bbc_include_image_group(); ?>
 				</div>
 			</div>
 		</div><!-- #primary -->
