@@ -124,6 +124,8 @@ function bbc_scripts() {
 	// Add Google Fonts
 	wp_enqueue_style( 'bbc-fonts', '//fonts.googleapis.com/css?family=Bree+Serif' );
 
+	// Add slider CSS
+	wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/inc/css/flexslider.css' );
 
 	//Add custom theme css
 	wp_enqueue_style( 'bbc-style', get_stylesheet_uri() );
@@ -131,6 +133,9 @@ function bbc_scripts() {
 	wp_enqueue_script( 'bbc-scripts', get_template_directory_uri() . '/js/bbc-scripts.js', array( 'jquery' ), '20170226', true );
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '20170301', true );
+
+	// Add slider JS
+	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/flexslider.min.js', array( 'jquery' ), '20170302', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'bbc_scripts' );

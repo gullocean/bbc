@@ -2129,10 +2129,14 @@ ul.list-info li {
     height: 320px;
 }
 
-.plan-info {
+.spec-section .plan-info {
     position: relative;
     height: 100%;
     border-right: 1px solid #5dc8ef;
+}
+
+.spec-section .plan-title {
+    margin-top: 0;
 }
 
 .plan-picture {
@@ -2160,7 +2164,6 @@ ul.list-info li {
 
 .floor-plan-custom-post h1, .floor-plan-custom-post h4 {
     color: #2e71a9;
-    margin-top: 0;
 }
 
 .floor-plan-custom-post .description {
