@@ -50,8 +50,8 @@
 	</header><!-- #masthead -->
 	<?php 
 		if (is_front_page()) {
-			//echo do_shortcode('[URIS id=39]');
-			masterslider(1);
+			echo do_shortcode('[URIS id=39]');
+			//masterslider(1);
 		}
 	?>
 	<div id="content" class="main-container">

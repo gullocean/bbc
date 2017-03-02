@@ -1754,6 +1754,10 @@ footer.bg-dark a {
 }
 
 /*!---------- 23. HOMEPAGE TEMPLATE ----------*/
+#primary.home-template {
+    padding-top: 0;
+}
+
 .home-template article {
     padding-top: 50px;
 }
