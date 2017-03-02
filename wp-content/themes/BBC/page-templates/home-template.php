@@ -8,6 +8,11 @@ get_header(); ?>
 	<div class="row">
 		<div id="primary" class="col-md-12 mb-xs-24 <?php echo esc_attr( $layout_class ); ?>">
 			<div class="container">
+
+				<div class="page-blogs">
+					<?php bbc_page_blogs(); ?>
+				</div><!-- List page blogs -->
+
 				<?php
 				while ( have_posts() ) : the_post();
 
@@ -16,14 +21,10 @@ get_header(); ?>
 				endwhile; // End of the loop.
 				?>
 
-				<div class="page-blogs">
-					<?php bbc_page_blogs(); ?>
-				</div><!-- List page blogs -->
-
 				<div class="contact-form-section margin60">
 					<div class="contact-wrapper">
 						<div class="col-md-9 col-xs-12 email-us"><h3>For more information, email us at <a href="mailto:<?php echo bbc_get_custom_field('contact_email_address') ? bbc_get_custom_field('contact_email_address') : 'info@boisebuilding.co'; ?>"><?php echo bbc_get_custom_field('contact_email_address') ? bbc_get_custom_field('contact_email_address') : 'info@boisebuilding.co'; ?></a> or give us a call <span><?php echo bbc_get_custom_field('phone_number') ? bbc_get_custom_field('phone_number') : '(208).939.3945'; ?></span></h3></div>	
-						<div class="col-md-3 col-xs-12 contact-form"><a href="<?php echo bbc_get_custom_field('contact_form_link') ? bbc_get_custom_field('contact_form_link') : '/contact' ;?>" class="btn"><?php echo bbc_get_custom_field('contact_form') ? bbc_get_custom_field('contact_form') : 'Contact Form' ;?></a></div>
+						<div class="col-md-3 col-xs-12 contact-form"><a href="<?php echo bbc_get_custom_field('contact_form_link') ? bbc_get_custom_field('contact_form_link') : '/contact' ;?>" class="btn-blue"><?php echo bbc_get_custom_field('contact_form') ? bbc_get_custom_field('contact_form') : 'Contact Form' ;?></a></div>
 						<div class="clearfix"></div>
 					</div>
 				</div>

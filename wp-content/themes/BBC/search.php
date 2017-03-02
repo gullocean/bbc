@@ -13,12 +13,18 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 					<?php
 						get_search_form();
 						// Get data from URL into variables
-						if ($_REQUEST['property_type'] != 'any') {
+						/*if ($_REQUEST['property_type'] != 'any') {
 							$property_type = $_REQUEST['property_type'];
 							$property_type_compare = '=';
 						} else {
 							$property_type = array('floorplan', 'move-in-ready');
 							$property_type_compare = 'IN';
+						}*/
+
+						if (isset($_REQUEST['price'])) {
+							$property_type = 'property';
+						} else {
+							$property_type = 'floor_plans';
 						}
 
 						$bedrooms       = $_REQUEST['bedrooms'] != 'any' ? $_REQUEST['bedrooms'] : 0;
@@ -51,12 +57,12 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 						                                array(
 						                                    'key'     => 'car_garage',
 						                                    'value'   => $garage,
-						                                    'compare' => '>=',
+						                                    'compare' => '>=', 
 						                                ),
 						                            )
 					    );
 
-						if (isset($_REQUEST['price']) && $property_type == 'property') {
+						if (isset($_REQUEST['price'])) {
 							$price_query = array(
 	                            'key'     => 'price',
 	                            'value'   => $price,
@@ -71,7 +77,7 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 						if( $floorSearchQuery->have_posts() ) :
 							$filtered_posts = $floorSearchQuery->posts;
 							foreach ($filtered_posts as $key => $filtered_post) {
-								$location   = get_post_meta($filtered_post->ID, 'location', true);
+								$square_feet   = get_post_meta($filtered_post->ID, 'square_feet', true);
 								$bedrooms   = get_post_meta($filtered_post->ID, 'bedrooms', true);
 								$bathrooms  = get_post_meta($filtered_post->ID, 'bathrooms', true);
 								$price      = get_post_meta($filtered_post->ID, 'price', true);
@@ -84,8 +90,12 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 								<a href="<?php echo $filtered_post_src; ?>"><img src="<?php echo $thumb_src[0]; ?>"></a>
 								<h1><?php echo $filtered_post->post_title; ?></h1>
 								<div class="plan-info">
-									<h2 class="location">Location: <?php echo $location; ?></h2>
-									<h5 class="price">Price: <?php echo $price; ?></h5>
+									<h2 class="square_feet">Square Ft: <?php echo $square_feet; ?></h2>
+
+									<?php if ($property_type == 'property'): ?>
+									<h5 class="price">Price: $<?php echo $price; ?></h5>
+									<?php endif;?>
+
 									<h6 class="other">
 										<span><?php echo $bedrooms;   ?> Bedrooms   | </span>
 										<span><?php echo $bathrooms;  ?> Bathrooms  | </span>

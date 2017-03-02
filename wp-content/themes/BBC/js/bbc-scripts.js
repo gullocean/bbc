@@ -61,7 +61,6 @@
 		$('.mobile-toggle').click(function () {
 			$('.nav-bar').toggleClass('nav-open');
 			$(this).toggleClass('active');
-			$('.search-widget-handle').toggleClass('hidden-xs hidden-sm');
 		});
 
 		$('.menu li').click(function (e) {

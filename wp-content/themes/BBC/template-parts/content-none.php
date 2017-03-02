@@ -13,7 +13,19 @@
 	<div class="page-content">
 		<header class="entry-header nolist">
 			<h1 class="page-title"><?php esc_html_e( 'No Results matching above conditions.', 'BBC' ); ?></h1>
-			<h4><?php esc_html_e( 'Please search the floor plans with other conditions', 'BBC' ); ?></h4>
+
+			<?php
+			
+			if (isset($_REQUEST['price']) && isset($_REQUEST['search'])) {
+				$no_results_msg = 'Please search available homes with other conditions';
+			} elseif (!isset($_REQUEST['price']) && isset($_REQUEST['search'])) {
+				$no_results_msg = 'Please search home designs with other conditions';
+			} else {
+				$no_results_msg = '';
+			}
+
+			?>
+			<h4><?php echo $no_results_msg; ?></h4>
 		</header><!-- .page-header -->
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

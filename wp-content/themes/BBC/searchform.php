@@ -16,12 +16,13 @@
 		$current_page = 'post';
 
 		// When user choose 'Move in Ready' from property type, the price condition field should be showed.
-		if ($filters['property_type'] == 'property') {
+		/*if ($filters['property_type'] == 'property') {
 			$current_page = 'property';			
-		}
+		}*/
 	}
 
-	if ($current_page == 'property') {
+
+	if (isset($_REQUEST['price']) || $current_page == 'property') {
 		$filter_group = array(
 			'square_feet' => array(
 				'any'     => 'Any',
@@ -47,11 +48,11 @@
 				'4'    => '4+',
 				'5'    => '5+'
 			),
-			'property_type' => array(
+			/*'property_type' => array(
 				'any'           => 'Any',
 				'floor_plans'     => 'Floorplan',
 				'property' => 'Move-in Ready'
-			),
+			),*/
 			'price' => array(
 				'any'  => 'Any',
 				'450000'    => '450000+',
@@ -95,11 +96,11 @@
 				'4'    => '4+',
 				'5'    => '5+'
 			),
-			'property_type' => array(
+			/*'property_type' => array(
 				'any'           => 'Any',
 				'floor_plans'     => 'Floorplan',
 				'property' => 'Move-in Ready'
-			),
+			),*/
 			'garage' => array(
 				'any'  => 'Any',
 				'1'    => '1+',
@@ -152,7 +153,7 @@
     	}
 
 	?>
-	<div class="<?php echo $column == 6 ? 'col-md-2 col-xs-6' : 'col-20 col-xs-6'; ?>">
+	<div class="<?php echo $column == 5 ? 'col-20 col-xs-6' : 'col-md-3 col-xs-6'; ?>">
 		<label for="<?php echo $key; ?>" class=""><?php echo $filter_label; ?></label><br>
 		<select name="<?php echo $key; ?>" id="<?php echo $key; ?>" class="form-control">
     	<?php

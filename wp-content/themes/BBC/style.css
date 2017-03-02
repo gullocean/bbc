@@ -608,6 +608,19 @@ hr {
     }
 }
 
+.btn-blue {
+    background-color: #347cb2;
+    font-size: 20px;
+    color: #FFF;
+    font-family: 'Bree Serif';
+    line-height: 34px;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 5px 30px;
+}
+
 .uppercase {
     font-weight: 400;
     text-transform: uppercase;
@@ -648,21 +661,8 @@ a {
     font-weight: normal;
 }
 
-a:visited {
-    color: #347cb2;
-}
-
-.image-bg a {
-    color: #fff;
-}
-
-.image-bg a:hover {
-    color: #fff;
-    opacity: .9;
-}
-
 a:hover {
-    color: #347cb2;
+    color: #FFF;
     text-decoration: none;
 }
 
@@ -690,8 +690,8 @@ section {
 }
 
 @media all and (max-width: 767px) {
-    section {
-        padding: 80px 0;
+    #primary {
+        padding: 0;
     }
 }
 
@@ -736,7 +736,7 @@ section {
 
 .btn, .button {
     font-family: "Bree Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border: 2px solid #2e71a9;
+    border: 2px solid #FFF;
     padding: 0 26px;
     min-width: 150px;
     line-height: 36px;
@@ -1084,6 +1084,24 @@ body.scrolled.is_admin_bar nav {
     top: 72px;
 }
 
+.dropdown-menu {
+    border-radius: 0;
+}
+
+.nav-open {
+    max-height: 10000px !important;
+    height: auto !important
+}
+
+.nav-open .navbar-collapse, .nav-open #menu {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-open .navbar-collapse ul li {
+        width: 100%;
+    }
+}
 /* 7 Search bar & Search Page */
 @media screen and (min-width: 992px) {
     #advanced-searchform >.col-20 {
@@ -1426,6 +1444,12 @@ img {
     height: 250px;
     width: 50%;
     margin: 25px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .flexslider ul.slides li img {
+        width: 80%;
+    }
 }
 /*!---------- 15. IMAGE GALLERIES ----------*/
 
@@ -1797,7 +1821,7 @@ footer.bg-dark a {
     position: relative;
     border: solid 1px #eee;
     border-top: solid 2px #72c02c;
-    padding: 30px 0 10px;
+    padding: 30px 0;
     vertical-align: middle;
     background-color: #FFF;
 }
@@ -1831,6 +1855,7 @@ footer.bg-dark a {
 .contact-form-section .email-us h3 {
     font-size: 20px;
     color: #347cb2;
+    margin-top: 5px;
 }
 
 .contact-form-section .email-us h3 a {
@@ -1844,14 +1869,6 @@ footer.bg-dark a {
 
 .contact-form-section .contact-form {
     text-align: right;
-}
-
-.contact-form-section .contact-form a {
-    background: #5fb611;
-    color: #FFF;
-    font-size: 15px;
-    border: none;
-    padding: 10px 20px;
 }
 
 .testimonial-section h3 {
@@ -2056,23 +2073,16 @@ ul.list-info li {
 }
 
 .wpcf7-submit {
-    color: #020202;
-    padding: 0 26px;
-    min-width: 150px;
-    line-height: 36px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 0;
-    text-align: center;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    margin-right: 8px;
-    margin-top: 20px;
-    font-family: "Bree Serif";
-}
+    background-color: #347cb2;
+    font-size: 20px;
+    color: #FFF;
+    font-family: 'Bree Serif';
+    line-height: 34px;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 5px 30px;}
 
 .contact-section .cf {
     margin-top: 15px;
@@ -2112,7 +2122,7 @@ ul.list-info li {
 .spec-section .plan-info {
     position: relative;
     height: 100%;
-    border-right: 1px solid #5dc8ef;
+    background-color: #5dc8ef;
 }
 
 .spec-section .plan-title {
@@ -2149,6 +2159,10 @@ ul.list-info li {
 .floor-plan-custom-post .description {
     text-align: justify;
     padding-right: 50px;
+}
+
+.spec-section .plan-info h1, .spec-section .plan-info h4, .spec-section .plan-info a {
+    color: #FFF;
 }
 
 @media screen and (max-width: 768px) {
