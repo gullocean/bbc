@@ -85,6 +85,20 @@
 			var galleryTitle = $(this).closest('.lightbox-grid').attr('data-gallery-title');
 			$(this).attr('data-lightbox', galleryTitle);
 		});
+
+		//Init FlexSlider on property template.
+		$('.flexslider').flexslider({
+			minItems      : 1,
+			maxItems      : 1,
+			move          : 1,
+			itemWidth     : 200,
+			itemMargin    : 0,
+			animation     : "slide",
+			slideshow     : true,
+			slideshowSpeed: 3000,
+			directionNav  : false,
+			controlNav    : false
+		});
 	});
 
 	/* Function To

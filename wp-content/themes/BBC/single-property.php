@@ -19,8 +19,28 @@ $thumb_src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), '
 					<h4 class="plan-feet">Square Ft: <?php echo get_post_meta(get_the_ID(), 'square_feet', true); ?></h4>
 				</div>
 			</div>
-			<div class="col-md-8 col-xs-12 plan-picture">
-				<img src="<?php echo $thumb_src[0]; ?>">
+			<div class="col-md-8 col-xs-12">
+				<div class="flexslider">
+				  	<ul class="slides">
+				  	<?php
+				  	$img_group = array();
+				  	for ($i=1; $i < 4; $i++) { 
+				  		$gallery_img_src = bbc_get_custom_field('gallery_image' . $i);
+				  		if (!empty($gallery_img_src)) {
+					  		array_push($img_group, $gallery_img_src);
+				  		}
+				  	}
+
+				  	foreach ($img_group as $img_src) {
+					  	?>
+				    	<li>
+				      		<img src="<?PHP echo $img_src; ?>" />
+				    	</li>
+					  	<?php
+				  	}
+				  	?>
+				  </ul>
+				</div>			
 			</div>
 			<div class="clearfix"></div>
 		</div>
