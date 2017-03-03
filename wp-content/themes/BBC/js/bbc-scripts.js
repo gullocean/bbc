@@ -8,9 +8,6 @@
 
 		// Smooth scroll to inner links
 
-		// Gmap API Load.
-		initialize();
-
 		jQuery('.inner-link').each(function () {
 			var href = jQuery(this).attr('href');
 			if ( href.charAt(0) !== "#" ) {
@@ -168,6 +165,7 @@
 
 	// Load Google map on community template.
 	if ($('#community-map').length) {// If there is map wrapper.
+		initialize();
 		setTimeout(function() {
 			codeAddress();
 		}, 1000);
