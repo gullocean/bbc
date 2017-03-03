@@ -1124,6 +1124,16 @@ body.scrolled.is_admin_bar nav {
     color: #347cb2;
 }
 
+@media screen and (max-width: 768px) {
+    #advanced-searchform label {
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+    .search-page h2.post-title {
+        margin-bottom: 0;
+    }
+}
+
 #advanced-searchform select {
     font-size: 16px;
     font-family: 'Bree Serif';

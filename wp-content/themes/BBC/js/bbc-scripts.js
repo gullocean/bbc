@@ -135,7 +135,7 @@
 	    geocoder = new google.maps.Geocoder();
 	    var latlng = new google.maps.LatLng(44.0682, 114.7420);
 	    var mapOptions = {
-	      zoom: 4,
+	      zoom: 7,
 	      center: latlng
 	    }
 	    map = new google.maps.Map(document.getElementById('community-map'), mapOptions);
