@@ -2230,7 +2230,36 @@ ul.list-info li {
     border-radius: 3px;
 }
 
-/*!---------- 29. OTHER ----------*/
+/*!---------- 29. Community Template ----------*/
+.communities-blog >div {
+    margin-bottom: 30px;
+}
+
+.communities-blog .wrp a {
+    display: block;
+    position: relative;
+}
+
+.communities-blog .wrp a h1 {
+    position: absolute;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: #707070;
+    margin: 0;
+    padding: 8px 0;
+    color: #FFF;
+}
+
+.communities-blog .wrp a .community-info {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+}
+/*!---------- 30. OTHER ----------*/
 
 .border-bottom {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);

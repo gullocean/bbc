@@ -136,6 +136,9 @@ function bbc_scripts() {
 
 	// Add slider JS
 	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/flexslider.min.js', array( 'jquery' ), '20170302', true );
+
+	// Add slider JS
+	wp_enqueue_script( 'googlemaps', '//maps.googleapis.com/maps/api/js?key=AIzaSyCVVmlgkIZTpuxWs3tSoBwofc78sydDw-4' );
 }
 
 add_action( 'wp_enqueue_scripts', 'bbc_scripts' );

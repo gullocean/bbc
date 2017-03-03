@@ -8,6 +8,9 @@
 
 		// Smooth scroll to inner links
 
+		// Gmap API Load.
+		initialize();
+
 		jQuery('.inner-link').each(function () {
 			var href = jQuery(this).attr('href');
 			if ( href.charAt(0) !== "#" ) {
@@ -127,6 +130,50 @@
 			cl_nav.removeClass('fixed scrolled outOfSight');
 			$('body').removeClass('scrolled is_admin_bar');
 		}
+	}
+
+	var geocoder;
+  	var map;
+	function initialize() {
+	    geocoder = new google.maps.Geocoder();
+	    var latlng = new google.maps.LatLng(44.0682, 114.7420);
+	    var mapOptions = {
+	      zoom: 4,
+	      center: latlng
+	    }
+	    map = new google.maps.Map(document.getElementById('community-map'), mapOptions);
+	}
+
+	function codeAddress() {
+	    //var address = document.getElementById('address').value;
+	    var address = [];
+	    for(i=0; i<$('input.idaho_location').length; i++) {
+	    	var real_location = $('input[name=location' + i + ']').val();
+	    	address.push(real_location);
+	    }
+
+	    //var address = ['Boise', 'Nampa', 'Challis', 'Cascade', 'Payette', 'Sun Valley'];
+
+	    for(i=0;i<address.length;i++) {
+	    	geocoder.geocode( { 'address': address[i]}, function(results, status) {
+		      if (status == 'OK') {
+		      	map.setCenter(results[0].geometry.location);
+		        var marker = new google.maps.Marker({
+		            map: map,
+		            position: results[0].geometry.location
+		        });
+		      } else {
+		        alert('Geocode was not successful for the following reason: ' + status);
+		      }
+		    });
+	    }
+	}
+
+	// Load Google map on community template.
+	if ($('#community-map').length) {// If there is map wrapper.
+		setTimeout(function() {
+			codeAddress();
+		}, 1000);
 	}
 
 })(jQuery);
