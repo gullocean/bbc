@@ -1813,6 +1813,10 @@ footer.bg-dark a {
     font-family: 'Bree Serif', serif;
 }
 
+.page-blogs .blog_info p.blog_title a:hover {
+    color: #347cb2;
+}
+
 .blog_more_link a {
     color: #72c02c;
     font-size: 14px;
@@ -1975,6 +1979,14 @@ footer.bg-dark a {
 }
 
 /*!---------- 24. Floor Plans TEMPLATE ----------*/
+.sharing-icons img {
+    width: 40px;
+}
+
+.sharing-icons a {
+    margin-right: 5px;
+}
+
 .floor-plans h3 {
     font-size: 36px;
     color: #347cb2;

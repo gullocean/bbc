@@ -778,6 +778,32 @@ function bbc_include_image_group() {
 	</div>
 	<?php
 }
+
+/*
+ * Display social icons in custom post template.
+ */
+function bbc_display_social_icons() {
+	$social_icons = array(
+		'facebook' => 'https://www.facebook.com/boisebuildingco',
+		'twitter' => 'https://twitter.com/BoiseBuildingCo',
+		'mail' => 'mailto:mike@boisebuilding.co',
+		'instagram' => 'https://www.instagram.com/boisebuildingco',
+	);
+
+	?>
+	<div class="sharing-icons margin30">
+	<?php
+	foreach ($social_icons as $key => $value) {
+		?>
+		<a href="<?php echo $value; ?>">
+			<img src="<?php echo get_template_directory_uri() . '/assets/images/social_icons/' . $key . '.png'?>">
+		</a>
+		<?php	
+	}
+	?>
+	</div>
+	<?php
+}
 /*
  * Get data from custom field.
  */
