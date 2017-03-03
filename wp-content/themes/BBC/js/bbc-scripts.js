@@ -145,14 +145,11 @@
 	}
 
 	function codeAddress() {
-	    //var address = document.getElementById('address').value;
 	    var address = [];
 	    for(i=0; i<$('input.idaho_location').length; i++) {
 	    	var real_location = $('input[name=location' + i + ']').val();
 	    	address.push(real_location);
 	    }
-
-	    //var address = ['Boise', 'Nampa', 'Challis', 'Cascade', 'Payette', 'Sun Valley'];
 
 	    for(i=0;i<address.length;i++) {
 	    	geocoder.geocode( { 'address': address[i]}, function(results, status) {

@@ -34,7 +34,7 @@ $thumb_src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), '
 				  	foreach ($img_group as $img_src) {
 					  	?>
 				    	<li>
-				      		<img src="<?PHP echo $img_src; ?>" />
+				      		<img src="<?php echo $img_src; ?>" />
 				    	</li>
 					  	<?php
 				  	}

@@ -2009,6 +2009,7 @@ footer.bg-dark a {
 .floor-plans h2, .list-posts h2 {
     font-size: 20px;
     color: #2e71a9;
+    margin-top: 0;
 }
 
 
@@ -2259,7 +2260,26 @@ ul.list-info li {
     width: 100%;
     text-align: center;
 }
-/*!---------- 30. OTHER ----------*/
+
+/*!---------- 30. Community Post Template ----------*/
+.community-slider a {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.community-slider .flexslider {
+    margin-bottom: 30px;
+}
+
+.community-desc {
+    text-align: justify;
+}
+
+.community-desc .post-title {
+    margin-left: 0;
+    margin-top: 25px;
+}
+/*!---------- 31. OTHER ----------*/
 
 .border-bottom {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
