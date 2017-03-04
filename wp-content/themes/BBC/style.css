@@ -2321,6 +2321,11 @@ ul.list-info li {
 .why-bbc-template h3 {
     color: #2e71a9;
 }
+
+/*!---------- 31. Energy Star Template ----------*/
+.energy-star-template h2.post-title {
+    margin-left: 0;
+}
 /*!---------- 32. OTHER ----------*/
 
 .border-bottom {
