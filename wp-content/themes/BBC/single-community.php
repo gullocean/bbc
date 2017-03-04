@@ -1,11 +1,5 @@
 <?php
-/*
-Template Name: About Template
-*/
-get_header(); ?>
-
-
-<?php 
+get_header();
 // Get the custom fields for community post template.
 $location = get_post_meta(get_the_ID(), 'location', true);
 

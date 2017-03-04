@@ -178,13 +178,13 @@ body {
     padding: 3px 10px;
     border-bottom: solid 1px #eee;
     text-transform: none;
-    color: #687074;
+    color: #347cb2;
 }
 
 .menu ul.sub-menu li a:hover {
-    background-color: #eee;
+    background-color: #347cb2;
     border: none;
-    color: #687074;
+    color: #FFF;
 }
 
 /* Small menu. */
@@ -575,18 +575,18 @@ hr {
 
 @media all and (max-width: 767px) {
     h1 {
-        font-size: 32px;
+        font-size: 26px;
         line-height: 40px;
         font-weight: 300;
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 26px;
         line-height: 40px;
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 32px;
     }
 
@@ -830,8 +830,11 @@ section {
 }
 
 .btn-filled:hover, .btn:visited:hover {
-    background: #5d47d7;
-    border-color: #5d47d7;
+    /*background: #5d47d7;
+    border-color: #5d47d7;*/
+    background: #FFF;
+    border-color: #347cb2;
+    color: #347cb2;
 }
 
 /*!---------- 7. NAVIGATION ----------*/
@@ -963,7 +966,7 @@ nav {
     left: 0;
     width: 200px;
     padding: 0;
-    background: #f7f7f7;
+    background: #FFF;
     position: absolute;
     z-index: 99;
     top: 100%;
@@ -1811,8 +1814,13 @@ footer.bg-dark a {
     transition: 0.25s;
 }
 
+.blog_thumb img {
+    width: 100%;
+}
+
 .page-blogs .blog_info {
     margin-top: 20px;
+    text-align: center;
 }
 
 .page-blogs .blog_info p.blog_title {
@@ -1821,10 +1829,8 @@ footer.bg-dark a {
 
 .page-blogs .blog_info p.blog_title a {
     font-family: 'Bree Serif', serif;
-}
-
-.page-blogs .blog_info p.blog_title a:hover {
-    color: #347cb2;
+    font-size: 26px;
+    text-transform: uppercase;
 }
 
 .blog_more_link a {
@@ -2289,7 +2295,23 @@ ul.list-info li {
     margin-left: 0;
     margin-top: 25px;
 }
-/*!---------- 31. OTHER ----------*/
+
+/*!---------- 31. Why BBC ----------*/
+.center-position {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 992px) {
+    .center-position {
+        position: relative;
+    }
+    .desc, .treasure-legacy {
+        padding: 0 20px;
+    }
+}
+/*!---------- 32. OTHER ----------*/
 
 .border-bottom {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);

@@ -657,7 +657,7 @@ function bbc_top_callout() {
  */
 function bbc_page_blogs() {
 	$blog_args = array(
-		'sort_order' => 'desc',
+		'sort_order' => 'DESC',
 		'sort_column' => 'post_title',
 		'meta_key' => 'homepage-blog',
 		'meta_value' => 'true',
@@ -688,8 +688,7 @@ function bbc_page_blogs() {
 			</a>		
 		</div>
 		<div class="blog_info">
-			<p class="blog_title"><a href="<?php  echo $blog_url; ?>"><?php echo $blog_page->post_title; ?></a></p>
-			<p class="blog_more_link"><a href="<?php  echo $see_more_link; ?>">See More</a></p>
+			<p class="blog_title"><a href="<?php  echo $blog_url; ?>">#<?php echo get_post_meta( $blog_page->ID, 'displayed-title', true ); ?></a></p>
 		</div>
 	</div>
 	<?php

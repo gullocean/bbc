@@ -73,6 +73,10 @@
 			}
 		});
 
+		$('.menu li').on('touch', function(event) {
+			event.preventDefault();
+		});
+
 		$('.menu li a').click(function () {
 			if ( $(this).hasClass('inner-link') ) {
 				$(this).closest('.nav-bar').removeClass('nav-open');
@@ -170,5 +174,13 @@
 			codeAddress();
 		}, 1000);
 	}
+
+	$( '.home-template .page-blogs img' ).hover(
+	  	function() {
+	    	$(this).parents('.blog_thumb').parent().find('.blog_info p.blog_title a').css('color', '#72c02c');
+	  	}, function() {
+	    	$(this).parents('.blog_thumb').parent().find('.blog_info p.blog_title a').css('color', '#347cb2');
+	  	}
+	);
 
 })(jQuery);
