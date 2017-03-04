@@ -139,8 +139,37 @@
 	    geocoder = new google.maps.Geocoder();
 	    var latlng = new google.maps.LatLng(44.0682, 114.7420);
 	    var mapOptions = {
-	      zoom: 7,
-	      center: latlng
+	      	zoom: 7,
+	     	center: latlng,
+	      	styles: [
+				{"featureType": "all",
+					"stylers":[
+						{"saturation": 0},
+						{"hue": "#e7ecf0"}
+					]
+				},
+				{"featureType": "road",
+					"stylers":[
+						{"saturation": -70}
+					]
+				},
+				{"featureType": "transit",
+					"stylers":[
+						{"visibility": "off"}
+					]
+				},
+				{"featureType": "poi",
+					"stylers":[
+						{"visibility": "off"}
+					]
+				},
+				{"featureType": "water",
+					"stylers":[
+						{"visibility": "simplified"},
+						{"saturation": -60}
+					]
+				}
+			]	
 	    }
 	    map = new google.maps.Map(document.getElementById('community-map'), mapOptions);
 	}

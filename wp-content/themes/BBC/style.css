@@ -1833,6 +1833,10 @@ footer.bg-dark a {
     text-transform: uppercase;
 }
 
+.page-blogs .blog_info p.blog_title a:hover {
+    color: #72c02c;
+}
+
 .blog_more_link a {
     color: #72c02c;
     font-size: 14px;
@@ -2301,15 +2305,21 @@ ul.list-info li {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 5%;
 }
 
 @media screen and (max-width: 992px) {
     .center-position {
         position: relative;
+        margin-top: 0;
     }
     .desc, .treasure-legacy {
         padding: 0 20px;
     }
+}
+
+.why-bbc-template h3 {
+    color: #2e71a9;
 }
 /*!---------- 32. OTHER ----------*/
 
