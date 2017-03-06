@@ -2251,6 +2251,12 @@ ul.list-info li {
     border-radius: 3px;
 }
 
+a.more-info:hover, a.download-plan:hover {
+    background-color: #FFF;
+    color: #2e71a9;
+    border-color: transparent;
+}
+
 /*!---------- 29. Community Template ----------*/
 .communities-blog >div {
     margin-bottom: 30px;
@@ -2326,7 +2332,34 @@ ul.list-info li {
 .energy-star-template h2.post-title {
     margin-left: 0;
 }
-/*!---------- 32. OTHER ----------*/
+
+.energy-img {
+    margin-top: 10px;
+}
+
+/*!---------- 32. Design Template ----------*/
+.design-template h2.post-title {
+    margin-left: 0;
+}
+
+.design-img {
+    margin-top: 20px;
+}
+
+.design-template .design-process-headline {
+    margin-left: 15px;
+    color: #2e71a9;
+}
+
+.design-step {
+    margin-top: 40px;
+}
+
+.design-step h4 {
+    color: #2e71a9;   
+}
+
+/*!---------- 33. OTHER ----------*/
 
 .border-bottom {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
