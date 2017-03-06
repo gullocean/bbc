@@ -56,7 +56,11 @@ $thumb_src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), '
 						endwhile; // End of the loop. 
 					?>
 
-					<?php bbc_display_social_icons(); ?>
+					<?php 
+						$current_page_url = get_permalink();
+						$property_name = get_the_title();
+						bbc_display_social_icons($current_page_url, $property_name); 
+					?>
 				</div>
 				<div class="col-md-6 col-xs-12 virtual-tour">
 					<h1>Virtual Tour</h1>

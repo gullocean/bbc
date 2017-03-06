@@ -781,12 +781,12 @@ function bbc_include_image_group() {
 /*
  * Display social icons in custom post template.
  */
-function bbc_display_social_icons() {
+function bbc_display_social_icons($current_url, $property_name) {
 	$social_icons = array(
-		'facebook' => 'https://www.facebook.com/boisebuildingco',
-		'twitter' => 'https://twitter.com/BoiseBuildingCo',
-		'mail' => 'mailto:mike@boisebuilding.co',
-		'instagram' => 'https://www.instagram.com/boisebuildingco',
+		'facebook' => 'http://www.facebook.com/sharer.php?u=' . $current_url,
+		'twitter' => 'https://twitter.com/share?url=' . $current_url . '&amp;text=' . $property_name . '&amp;hashtags=BoiseBuildingCompany',
+		'mail' => 'mailto:?Body=I%20saw%20this%20and%20thought%20of%20you!%20 ' . $current_url,
+		'instagram' => "javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());",
 	);
 
 	?>
@@ -794,7 +794,7 @@ function bbc_display_social_icons() {
 	<?php
 	foreach ($social_icons as $key => $value) {
 		?>
-		<a href="<?php echo $value; ?>">
+		<a href="<?php echo $value; ?>" target="blank">
 			<img src="<?php echo get_template_directory_uri() . '/assets/images/social_icons/' . $key . '.png'?>">
 		</a>
 		<?php	
