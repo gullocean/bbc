@@ -2148,6 +2148,16 @@ ul.list-info li {
     font-family: "Bree Serif";
 }
 
+.wpcf7-form select {
+    width: 315px;
+}
+
+@media screen and (max-width: 380px) {
+    .wpcf7-form select {
+        width: auto;
+    }
+}
+
 /*!---------- 27. HOME PLANS PAGE ----------*/
 .banner img {
     width: 100%;

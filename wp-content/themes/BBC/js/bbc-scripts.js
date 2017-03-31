@@ -216,4 +216,20 @@
 	  	}
 	);
 
+	// custom script on contact form.
+	var jCustomerSelection = $('select.customer-option'),
+		jAddressField      = $('input.customer-address');
+
+	if (jCustomerSelection.length) {
+		jCustomerSelection.on('change', function() {
+			console.log($(this).val());
+			var customerName = $(this).val();
+			if (customerName == 'New Customer') {
+				jAddressField.parent().parent().parent().addClass('hide');
+			} else {
+				jAddressField.parent().parent().parent().removeClass('hide');
+			}
+		})
+	}
+
 })(jQuery);
