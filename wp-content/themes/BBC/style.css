@@ -2333,6 +2333,19 @@ a.more-info:hover, a.download-plan:hover {
     margin-top: 25px;
 }
 
+.associated-post {
+    margin-top: 50px;
+}
+
+.associated-post a {
+    display: block;
+}
+
+.associated-post h3.post-title {
+    color: #2e71a9;
+    font-size: 20px;
+}
+
 /*!---------- 31. Why BBC ----------*/
 .center-position {
     position: absolute;

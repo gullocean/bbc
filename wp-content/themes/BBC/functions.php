@@ -79,6 +79,47 @@ if ( ! function_exists( 'bbc_setup' ) ) :
 		add_image_size( 'bbc-grid', 350, 300, true );
 
 		add_theme_support( 'customize-selective-refresh-widgets' );
+		add_theme_support( 'title-tag' );
+
+		// Add Properties to community post dashboard. For this, we can use the custom taxonomy named as associated_properties.
+		$labels = array(
+			'name'              => _x( 'Associated Properties', 'taxonomy general name', 'textdomain' ),
+			'singular_name'     => _x( 'Associated Properties', 'taxonomy singular name', 'textdomain' ),
+			'all_items'         => __( 'All Properties', 'textdomain' ),
+			'menu_name'         => __( 'Associated Properties', 'textdomain' ),
+		);
+
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'associated_properties' ),
+		);
+
+		register_taxonomy( 'associated_properties', array('community'), $args );
+
+		// Insert all properties to custom taxonomy.
+		$args = array(
+			'posts_per_page' => -1,
+			'post_type'      => 'property',
+			'post_status'    => 'publish',
+		);
+		$posts  = get_posts($args);
+
+		foreach ($posts as $post) {
+
+			if (!term_exists($post->post_title, 'associated_properties')) {
+				wp_insert_term(
+				  	$post->post_title, // the term 
+				  	'associated_properties', // the taxonomy
+				  	array(
+				  		'post_id' => $post->ID
+			  		)
+				);		
+			}
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'bbc_setup' );
