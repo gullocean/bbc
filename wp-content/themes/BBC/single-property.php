@@ -87,12 +87,15 @@ $thumb_src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), '
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="gmap">
-					<h1 class="margin20">Map</h1>
-					<iframe src="<?php echo bbc_get_custom_field('property_map') ? bbc_get_custom_field('property_map') : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.007618886696!2d-116.33989899999997!3d43.68960499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54afaaadadcf2ef3%3A0xfc1f882504997a5c!2s1159+E+Iron+Eagle+Dr+%23120%2C+Eagle%2C+ID+83616!5e0!3m2!1sen!2sus!4v1436305058721'; ?>" width="100%" height="300"></iframe>
-				</div>
 			</div>
 		</div><!-- #primary -->
+
+		<?php
+		$location = bbc_get_custom_field('location') ? bbc_get_custom_field('location') : 'Boise';
+		echo $location;
+		?>
+		<input type="hidden" class="idaho_location" name="location0" value="<?php echo $location; ?>" />
+		<div id="community-map" style="width: 100%; height: 300px;"></div>
 	</div>
 <?php
 get_footer();

@@ -79,7 +79,6 @@
 			</div>
 		</div><!-- #primary -->
 
-
 		<input type="hidden" class="idaho_location" name="location0" value="<?php echo $location; ?>" />
 		<div id="community-map" style="width: 100%; height: 300px;"></div>
 	</div>

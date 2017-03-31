@@ -171,6 +171,10 @@
 				}
 			]	
 	    }
+
+	    if (!$('#community-map').hasClass('big')) {
+	    	mapOptions.zoom = 9;
+	    }
 	    map = new google.maps.Map(document.getElementById('community-map'), mapOptions);
 	}
 

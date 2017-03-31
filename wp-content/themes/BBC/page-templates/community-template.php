@@ -19,7 +19,7 @@ get_header(); ?>
 	$communities = get_posts( $args );
 ?>
 	<div class="row">
-		<div id="community-map" style="height: 400px;"></div>
+		<div id="community-map" class="big" style="height: 400px;"></div>
 		<div id="primary" class="col-md-12 mb-xs-24 community-template">
 			<div class="container">
 				<?php
