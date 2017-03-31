@@ -40,6 +40,12 @@ get_header(); ?>
 						'post_type'        => $post_type,
 						'post_status'      => 'publish',
 					);
+
+					if ($post_type == 'property') {
+						$args['meta_key'] = 'price';
+						$args['orderby'] = 'meta_value';
+					}
+
 					$post_lists = get_posts( $args );
 
 					foreach ($post_lists as $post_list) {

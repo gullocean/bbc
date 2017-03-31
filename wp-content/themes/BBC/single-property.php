@@ -92,7 +92,6 @@ $thumb_src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), '
 
 		<?php
 		$location = bbc_get_custom_field('location') ? bbc_get_custom_field('location') : 'Boise';
-		echo $location;
 		?>
 		<input type="hidden" class="idaho_location" name="location0" value="<?php echo $location; ?>" />
 		<div id="community-map" style="width: 100%; height: 300px;"></div>

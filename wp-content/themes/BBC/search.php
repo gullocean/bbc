@@ -37,7 +37,7 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 						$v_args = array(
 						        'post_type'     =>  $property_type,
 						        'order'         =>  'ASC',
-						        'orderby'       =>  'data', 
+						        'orderby'       =>  'date', 
 						        'meta_query'    =>  array(
 						                                array(
 						                                    'key'     => 'bedrooms',
@@ -69,6 +69,9 @@ $layout_class = ( function_exists( 'bbc_get_layout_class' ) ) ? bbc_get_layout_c
 	                            'compare' => '>=',
 							);
 							array_push($v_args['meta_query'], $price_query);
+
+							$v_args['meta_key'] = 'price';
+							$v_args['orderby'] = 'meta_value';
 						}
 
 						$floorSearchQuery = new WP_Query( $v_args );
